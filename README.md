@@ -1,83 +1,58 @@
-<p align="center">
-<img src = "https://user-images.githubusercontent.com/40419750/59024126-d9996680-886e-11e9-8af9-1084288699f2.png" width=100 height=100>
-</p>
+# 🏓 Ping Pong AI Championship
 
-<h1 align="center">pingpongAI</h1>
-<div align="center">
-<img src="https://img.shields.io/github/license/sushantPatrikar/pingpongAI">	
-<img src="https://www.codefactor.io/repository/github/sushantpatrikar/pingpongai/badge/master"/>
-<img src="https://img.shields.io/github/issues-pr/sushantPatrikar/pingpongAI">
-<img src="https://img.shields.io/github/stars/sushantPatrikar/pingpongAI">
-<img src="https://img.shields.io/github/forks/sushantPatrikar/pingpongAI">
-<img src="https://img.shields.io/github/issues/sushantPatrikar/pingpongAI">
-<img src="https://img.shields.io/badge/PRs-welcome-informational">
-</div>
+Game Ping Pong với AI tự động chơi sử dụng Neural Network và Genetic Algorithm.
 
-<h4 align="center">Ping Pong game, but AI plays it</h4>
-<hr>
-<p align="center">
-<img src = "./genetic gifs/gen20.gif" height=400 width=600>
-</p>
+## ✨ Tính năng
 
-<h4 align="center">AI plays Ping Pong using Neuroevolution of Augmenting Topologies(NEAT)</h4>
+- 🤖 2 AI đối diện nhau (xanh vs đỏ)
+- 🎯 AI có thể đỡ hụt (không chơi mãi mãi)
+- 🏆 Best of 3 (5 điểm = 1 ván, 2 ván = thắng)
+- ⚙️ 3 mức độ khó: Easy / Medium / Hard
+- ⏸️ Pause/Resume (Space)
+- 🔄 Chơi lại (Enter)
 
-Every generation starts with the population of 200 bars. Every bar has it's own corressponding ball. The aim is to protect the ball from falling down. Once all the bars are dead, next generation is generated. For every 200 individuals of next generation 2 parents are selected from the previous genertion. The selected two parents are crossovered, followed by some percentage of mutation(generally low %).
+## 🎮 Cách chơi
 
-Every bar looks in 5 direction:
+### Cài đặt
+```bash
+pip install pygame numpy
+```
 
-<p align="center">
-  <img src = "./genetic screenshots/QI.png" height=300 width=300>
-  
-  It's distance from the ball in Quadrant I, relative to it's positon and ball's velocity(If it is present in Quadrant I)
-</p>
+### Chạy game
+```bash
+python game.py
+```
 
-<p align="center">
-  <img src = "./genetic screenshots/QII.png" height=300 width=300>
-  
-  It's distance from the ball in Quadrant II, relative to it's positon and ball's velocity(If it is present in Quadrant II)
-</p>
+Chọn độ khó:
+- `1` - EASY (AI dễ đỡ hụt)
+- `2` - MEDIUM (cân bằng)
+- `3` - HARD (AI khó đỡ hụt)
 
-<p align="center">
-  <img src = "./genetic screenshots/Straight.png" height=300 width=300>
-  
-  It's distance from the ball in straight direction, relative to it's positon, and ball's velocity(If it is present overhead)
-</p>
+## 📁 Cấu trúc
+```
+AI_PingPong/
+├── NeuralNetwork.py  # Mạng neural
+├── game.py           # Game chính
+└── README.md         # File này
+```
 
-<p align="center">
-  <img src = "./genetic screenshots/wall1.png" height=80 width=600>
-  
-  It's distance from the left wall.
-</p>
+## 🧠 Cách AI hoạt động
 
-<p align="center">
-  <img src = "./genetic screenshots/wall2.png" height=80 width=600>
-  
-  It's distance from the right wall.
-</p>
+AI sử dụng logic dự đoán:
+- Tính toán vị trí bóng sẽ rơi
+- Di chuyển paddle đến vị trí đó
+- **Các yếu tố đỡ hụt:**
+  - Delay phản ứng (1-6 frames)
+  - Độ chính xác (65%-95%)
+  - Tốc độ ngẫu nhiên (80%-100%)
+  - Hiệu ứng mệt mỏi
+  - 5% cơ hội đỡ hụt ngẫu nhiên
+  - Bóng tăng tốc mỗi 5 rally
 
+## 🎨 Screenshots
 
-Initial generation looks like this
-<p align="center">
-<img src = "./genetic gifs/gen2.gif" height=400 width=600>
-</p>
+(Thêm ảnh sau)
 
-Initially, the bars have no clue, these are just random decisions i.e Move Right or Move Left
+## 📜 License
 
-After some generations we see some improvements:
-<p align="center">
-<img src = "./genetic gifs/gen6.gif" height=400 width=600>
-</p>
-By this generation the bars start taking some sensible decisions
-
-<br>
-<p>As the generations go on, the AI becomes master in playing this game</p>
-<p align="center">
-<img src = "./genetic gifs/gen20.gif" height=400 width=600>
-</p>
-<p>For detailed explanation, you can visit my <a href="https://sushantpatrikar.github.io/flappybirdAI.html"> website</a>.</p>
-
-
-<p>For human playable version of this game, Click <a href="https://github.com/sushantPatrikar/pingpong">here</a></p>
-
-<h2>Future Scope</h2>
-<p>Right now, the algorithm used is NEAT. Some other Reinforcement Learning algorithm, such as Deep Q-Learning can be applied to it. If you have any other ideas, Pull Requests are welcomed!</p>
+MIT License
