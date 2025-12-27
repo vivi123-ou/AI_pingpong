@@ -28,7 +28,10 @@ Chọn độ khó:
 - `2` - MEDIUM (cân bằng)
 - `3` - HARD (AI khó đỡ hụt)
 
-## 📁 Cấu trúc
+![AI_Menu](https://github.com/user-attachments/assets/74a1fea8-4d5f-46e6-bcc3-eb9f75e4c24b)
+
+
+## Cấu trúc
 ```
 AI_PingPong/
 ├── NeuralNetwork.py  # Mạng neural
@@ -51,7 +54,11 @@ AI sử dụng logic dự đoán:
 
 ## Screenshots
 
-(Thêm ảnh sau)
+Training
+![TrainingMode](https://github.com/user-attachments/assets/cfdb572e-3a3f-409d-be4c-e720c941990a)
+
+Demo
+
 
 ## License
 
