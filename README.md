@@ -58,8 +58,7 @@ Training
 ![TrainingMode](https://github.com/user-attachments/assets/cfdb572e-3a3f-409d-be4c-e720c941990a)
 
 Demo
-
-
+![Demo](https://github.com/user-attachments/assets/69bacd1b-6b6f-466e-9fc0-fcea70ece847)
 ## License
 
 MIT License
