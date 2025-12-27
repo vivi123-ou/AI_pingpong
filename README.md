@@ -34,9 +34,12 @@ Chọn độ khó:
 ## Cấu trúc
 ```
 AI_PingPong/
-├── NeuralNetwork.py  # Mạng neural
-├── game.py           # Game chính
-└── README.md         # File này
+├── main.py
+├── menu.py
+├── NeuralNetwork.py   
+├── pingpongAI.py 
+├── pingpongMatch.py
+└── README.md           
 ```
 
 ## Cách AI hoạt động
@@ -55,9 +58,11 @@ AI sử dụng logic dự đoán:
 ## Screenshots
 
 Training
+
 ![TrainingMode](https://github.com/user-attachments/assets/cfdb572e-3a3f-409d-be4c-e720c941990a)
 
 Demo
+
 ![Demo](https://github.com/user-attachments/assets/69bacd1b-6b6f-466e-9fc0-fcea70ece847)
 ## License
 
