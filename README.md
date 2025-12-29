@@ -61,9 +61,12 @@ Training
 
 ![TrainingMode](https://github.com/user-attachments/assets/cfdb572e-3a3f-409d-be4c-e720c941990a)
 
+Đầu tiên class Game tạo ra 100 con AI ngẫu nhiên. Mỗi con dùng mạng Neural (predict) với 9 đầu vào (vị trí bóng, vận tốc...) để quyết định di chuyển. Khi tất cả các con bị thua (bóng rớt), class GA sẽ tính điểm fitness (dựa trên điểm số và quãng đường di chuyển). Sau đó dùng hàm pickOne để lai ghép (Crossover) gen của những con giỏi nhất và đột biến (Mutate) nhẹ để tạo ra thế hệ sau thông minh hơn.
+
 Demo
 
 ![Demo](https://github.com/user-attachments/assets/69bacd1b-6b6f-466e-9fc0-fcea70ece847)
+
 ## License
 
 MIT License
